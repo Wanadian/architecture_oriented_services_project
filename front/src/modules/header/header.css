@@ -1,0 +1,91 @@
+.header{
+    font-family: "Space Grotesk",-apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    height: 4rem;
+    display: inline-flex;
+    background-color: rgba(0, 0, 0, 0.88);
+    width: 100%;
+    justify-content: space-between;
+}
+
+.headerLink{
+    margin: 1rem;
+    display: flex;
+    color: #ffffff;
+    text-decoration: none;
+    align-items: center;
+    font-weight: 900;
+    font-size: 20px;
+}
+.headerLink:hover{
+    color: rgba(157, 157, 157, 0.65);
+    transition: color 0.3s;
+}
+
+.headerMenuContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerMenuTrigger {
+    margin: 1rem;
+    background: #ffffff;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 0.375rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    border: none;
+    vertical-align: middle;
+    transition: box-shadow 0.4s ease;
+}
+
+.headerMenuTrigger:hover {
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+}
+
+.headerMenuTrigger span {
+    font-weight: 700;
+    vertical-align: middle;
+    font-size: 14px;
+    margin: 0.625rem 0.625rem;
+}
+
+.headerMenu {
+    background: #ffffff;
+    border-radius: 8px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 18.75rem;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+}
+
+.headerMenu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.headerMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.headerMenu li {
+    border-bottom: 1px solid #dddddd;
+}
+
+.headerMenu li a {
+    text-decoration: none;
+    color: #333333;
+    padding: 0.9375rem 1.25rem;
+    display: block;
+}

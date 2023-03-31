@@ -1,0 +1,11 @@
+.loginContainer{
+    font-family: "Space Grotesk",-apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    display: grid;
+    margin-top: 18rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.loginTextInput{
+    margin-bottom: 2rem;
+}
