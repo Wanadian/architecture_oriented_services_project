@@ -1,0 +1,8 @@
+.productCardContainer{
+    display: block;
+    width: 400px;
+    height: 260px;
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+}
