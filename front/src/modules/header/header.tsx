@@ -25,7 +25,7 @@ export function Header(){
                             <a href="https://www.google.com/">My cart</a>
                         </li>
                         <li>
-                            <a href="https://www.google.com/">My orders</a>
+                            <a href={window.origin + "/orders"}>My orders</a>
                         </li>
                     </ul>
                 </nav>

@@ -1,9 +1,30 @@
 import {OrderCardProps} from "./orderCard.type";
+import React, {useState} from "react";
+import expandIcon from "./assets/expandIcon.svg";
+import retractIcon from "./assets/retractIcon.svg";
+import "./orderCard.css";
+import {OrderProductCard} from "../orderProductCard/orderProductCard";
 
-export function OrderCard({name, imageUrl, price, description} : OrderCardProps) {
+export function OrderCard({date, price, products, classname, orderProductCardsClassname} : OrderCardProps) {
+    const [showProducts, setShowProducts] = useState(false)
+
+    const onClickAction = () =>{setShowProducts(!showProducts);}
+
     return(
-        <span className="productCardContainer">
-            <span></span>
+        <div className={`orderCardContainer ${classname}`}>
+            <span>
+                <span className={"orderCardDate"}>{date.toDateString()}</span>
+                <span>{price}</span>
             </span>
+            <button className={"orderDisplayButton"} onClick={onClickAction}>
+                <img className={"orderCardImage"} src={showProducts? retractIcon : expandIcon} alt={"expand icon"}/>
+            </button>
+            {showProducts &&
+                <ul>
+                    {products.map(product =>
+                        <OrderProductCard name={product.name} price={product.price} classname={orderProductCardsClassname}></OrderProductCard>
+                    )}
+                </ul>}
+        </div>
     );
 }

@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f77579d3-423e-4a2b-bb1b-b0467012847c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/modules/productCard/productCard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/productCard/productCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/productCard/productCard.type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/accountCreation/accountCreation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/backendSetup/orderFormat.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/backendSetup/productFormat.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/orderProductCard/orderProductCard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/orderProductCard/orderProductCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/orderProductCard/orderProductCard.type.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/accountCreation/accountCreation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/accountCreation/accountCreation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/header/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/orderCard/orderCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/orderCard/orderCard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/orderCard/orderCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/orderCard/orderCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/orderCard/orderCard.type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/orderCard/orderCard.type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/orders/orders.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/orders/orders.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,34 +40,31 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "feat/front/add-font-end",
+    "jdk.selected.JAVA_MODULE": "openjdk-19",
     "last_opened_file_path": "/Users/william/development/service_oriented_architecture/architecture_oriented_services_project/front",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "ts.external.directory.path": "/Users/william/development/service_oriented_architecture/architecture_oriented_services_project/front/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/modules/orderCard" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
-    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="build" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -76,7 +78,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
-        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -88,7 +89,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680185834050</updated>
-      <workItem from="1680185835484" duration="29465000" />
+      <workItem from="1680185835484" duration="31529000" />
+      <workItem from="1681236777261" duration="35000" />
+      <workItem from="1681236829009" duration="803000" />
+      <workItem from="1681237641919" duration="6796000" />
     </task>
     <servers />
   </component>

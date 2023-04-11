@@ -1,6 +1,9 @@
+import {productSummaryResponse} from "../../backendSetup/productFormat";
+
 export type OrderCardProps = {
-    name: string,
-    imageUrl: string,
+    date: Date,
     price: number,
-    description?: string
+    products: productSummaryResponse[],
+    classname?: string,
+    orderProductCardsClassname?: string
 }
