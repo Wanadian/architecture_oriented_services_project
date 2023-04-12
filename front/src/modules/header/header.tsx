@@ -6,7 +6,7 @@ export function Header(){
     const onClick = () => setIsActive(!isActive);
     return(
         <div className="header">
-            <a className={"headerLink"} href="https://www.google.com/">
+            <a className={"headerLink"} href={window.origin + "/products"}>
                 Online Shop
             </a>
             <span className="headerMenuContainer">
@@ -16,13 +16,13 @@ export function Header(){
                 <nav className={`headerMenu ${isActive ? "active" : "inactive"}`}>
                     <ul>
                         <li>
-                            <a href="https://www.google.com/">Login</a>
+                            <a href={window.origin + "/account/login"}>Login</a>
                         </li>
                         <li>
-                            <a href="https://www.google.com/">Create account</a>
+                            <a href={window.origin + "/account/create"}>Create account</a>
                         </li>
                         <li>
-                            <a href="https://www.google.com/">My cart</a>
+                            <a href={window.origin + "/cartDetails"}>My cart</a>
                         </li>
                         <li>
                             <a href={window.origin + "/orders"}>My orders</a>

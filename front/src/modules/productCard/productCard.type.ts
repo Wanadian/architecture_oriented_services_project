@@ -1,6 +1,6 @@
 export type ProductCardProps = {
     name: string,
-    imageUrl: string,
+    imageSource?: string,
     price: number,
     description?: string
 }

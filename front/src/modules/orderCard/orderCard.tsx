@@ -11,20 +11,21 @@ export function OrderCard({date, price, products, classname, orderProductCardsCl
     const onClickAction = () =>{setShowProducts(!showProducts);}
 
     return(
-        <div className={`orderCardContainer ${classname}`}>
-            <span>
-                <span className={"orderCardDate"}>{date.toDateString()}</span>
-                <span>{price}</span>
-            </span>
-            <button className={"orderDisplayButton"} onClick={onClickAction}>
+        <div className={`orderCardContainer ${classname}`} onClick={onClickAction}>
+            <div className={`smallOrderCardContainer`}>
+                <span>
+                    <span className={"orderCardDate"}>{date.toDateString()}</span>
+                    <span>{price}</span>
+                </span>
                 <img className={"orderCardImage"} src={showProducts? retractIcon : expandIcon} alt={"expand icon"}/>
-            </button>
+            </div>
             {showProducts &&
-                <ul>
+                <ul className={"orderCardProductList"}>
                     {products.map(product =>
                         <OrderProductCard name={product.name} price={product.price} classname={orderProductCardsClassname}></OrderProductCard>
                     )}
-                </ul>}
+                </ul>
+            }
         </div>
     );
 }
