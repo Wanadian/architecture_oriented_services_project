@@ -1,5 +1,5 @@
 import {TextInputProps} from "./textInput.type";
-import "./textInput.css"
+import "./textInput.css";
 
 export function TextInput ({placeholder, className} : TextInputProps) {
     return(

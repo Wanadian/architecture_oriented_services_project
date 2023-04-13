@@ -1,7 +1,11 @@
-.ordersContainer{
+.cartDetailsContainer{
     font-family: "Space Grotesk",-apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    margin-top: 2rem;
+    align-content: center;
     justify-content: center;
-    width: 100%;
+}
+
+.orderCardProductList{
+    justify-content: center;
 }

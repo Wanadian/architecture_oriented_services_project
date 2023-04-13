@@ -1,5 +1,5 @@
 import {ButtonProps} from "./button.type";
-import "./button.css"
+import "./button.css";
 
 export function Button ({label, onClick, className} : ButtonProps) {
     return(

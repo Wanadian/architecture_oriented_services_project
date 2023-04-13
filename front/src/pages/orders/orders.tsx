@@ -6,6 +6,14 @@ export function Orders() {
     return (
         <div className={"ordersContainer"}>
             <OrderCard date={new Date()} price={20} products={[{id: "id", name: "name", price: 20}, {id: "id", name: "name", price: 20}]}/>
+            <OrderCard date={new Date()} price={20} products={[{id: "id", name: "name", price: 20}, {id: "id", name: "name", price: 20}]}/>
+            <OrderCard date={new Date()} price={20} products={[{id: "id", name: "name", price: 20}, {id: "id", name: "name", price: 20}]}/>
+            <OrderCard date={new Date()} price={20} products={[{id: "id", name: "name", price: 20}, {id: "id", name: "name", price: 20}]}/>
+            <OrderCard date={new Date()} price={20} products={[{id: "id", name: "name", price: 20}, {id: "id", name: "name", price: 20}]}/>
+            <OrderCard date={new Date()} price={20} products={[{id: "id", name: "name", price: 20}, {id: "id", name: "name", price: 20}]}/>
+            <OrderCard date={new Date()} price={20} products={[{id: "id", name: "name", price: 20}, {id: "id", name: "name", price: 20}]}/>
+            <OrderCard date={new Date()} price={20} products={[{id: "id", name: "name", price: 20}, {id: "id", name: "name", price: 20}]}/>
+            <OrderCard date={new Date()} price={20} products={[{id: "id", name: "name", price: 20}, {id: "id", name: "name", price: 20}]}/>
         </div>
     );
 }

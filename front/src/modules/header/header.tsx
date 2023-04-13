@@ -1,5 +1,6 @@
-import "./header.css"
-import {useState} from "react";
+import React, {useState} from "react";
+import shoppingCartIcon from "./assets/shoppingCartIcon.svg";
+import "./header.css";
 
 export function Header(){
     const [isActive, setIsActive] = useState(false);
@@ -10,6 +11,9 @@ export function Header(){
                 Online Shop
             </a>
             <span className="headerMenuContainer">
+                <a className="headerMenuCartImage"  href={window.origin + "/cartDetails"}>
+                    <img src={shoppingCartIcon}/>
+                </a>
                 <button onClick={onClick} className="headerMenuTrigger">
                     <span>Account</span>
                 </button>
@@ -20,9 +24,6 @@ export function Header(){
                         </li>
                         <li>
                             <a href={window.origin + "/account/create"}>Create account</a>
-                        </li>
-                        <li>
-                            <a href={window.origin + "/cartDetails"}>My cart</a>
                         </li>
                         <li>
                             <a href={window.origin + "/orders"}>My orders</a>

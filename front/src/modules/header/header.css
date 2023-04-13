@@ -28,6 +28,15 @@
     align-items: center;
 }
 
+.headerMenuCartImage{
+    padding: 0.3rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 0.5rem;
+}
+
 .headerMenuTrigger {
     margin: 1rem;
     background: #ffffff;
