@@ -27,8 +27,7 @@ public class AuthService {
 
     public String generateToken(String email, String password){
         User user = userRepository.findByEmail(email);
-        String encodedPassword = passwordEncoder.encode(password);
-        if (user == null || !encodedPassword.equals(user.getPassword())){
+        if (user == null || !passwordEncoder.matches(password, user.getPassword())){
             return "";
         }
         return jwtService.generateToken(email);

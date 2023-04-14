@@ -4,8 +4,6 @@
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-M
-config/api-gateway.properties,8\5\85733b82fa5333811f01c3410d459570ebf29fdd
 >
 ms-client/.env,3\8\3866a082fc24cd7d6b8db1702e00c9a4ae56041c
 q
