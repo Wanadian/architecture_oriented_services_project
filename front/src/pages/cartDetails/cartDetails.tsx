@@ -1,7 +1,7 @@
 import React from "react";
-import "./cartDetails.css";
 import {OrderProductCard} from "../../modules/orderProductCard/orderProductCard";
 import {Button} from "../../components/button/button";
+import "./cartDetails.css";
 
 export function CartDetails() {
     const price = 0;

@@ -6,4 +6,4 @@ export type OrderCardProps = {
     products: productResponse[],
     classname?: string,
     orderProductCardsClassname?: string
-}
+};

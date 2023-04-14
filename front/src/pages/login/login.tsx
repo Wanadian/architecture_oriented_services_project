@@ -1,7 +1,7 @@
 import React from "react";
-import "./login.css"
 import {Button} from "../../components/button/button";
 import {TextInput} from "../../components/textInput/textInput";
+import "./login.css";
 
 export function Login() {
     return (

@@ -1,11 +1,11 @@
 import React, {useState} from "react";
 import shoppingCartIcon from "./assets/shoppingCartIcon.svg";
-import "./header.css";
 import {showHeaderLinks} from "./header.utils";
+import "./header.css";
 
 export function Header(){
     const [isActive, setIsActive] = useState(false);
-    const onClick = () => setIsActive(!isActive);
+    const handleClick = () => setIsActive(!isActive);
     return(
         <div className="header">
             <a className={"headerLink"} href={window.origin + "/products"}>
@@ -16,7 +16,7 @@ export function Header(){
                     <a className="headerMenuCartImage"  href={window.origin + "/cartDetails"}>
                         <img src={shoppingCartIcon}/>
                     </a>
-                        <button onClick={onClick} className="headerMenuTrigger">
+                        <button onClick={handleClick} className="headerMenuTrigger">
                             <span>Account</span>
                         </button>
                         <nav className={`headerMenu ${isActive ? "active" : "inactive"}`}>

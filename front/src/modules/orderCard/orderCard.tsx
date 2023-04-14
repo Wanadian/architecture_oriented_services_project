@@ -8,10 +8,10 @@ import "./orderCard.css";
 export function OrderCard({date, price, products, classname, orderProductCardsClassname} : OrderCardProps) {
     const [showProducts, setShowProducts] = useState(false)
 
-    const onClickAction = () =>{setShowProducts(!showProducts);}
+    const handleClick = () =>{setShowProducts(!showProducts);}
 
     return(
-        <div className={`orderCardContainer ${classname}`} onClick={onClickAction}>
+        <div className={`orderCardContainer ${classname}`} onClick={handleClick}>
             <div className={`smallOrderCardContainer`}>
                 <span>
                     <span className={"orderCardDate"}>{date.toDateString()}</span>

@@ -3,4 +3,4 @@ export type ProductCardProps = {
     imageSource?: string,
     price: number,
     classname?: string
-}
+};

@@ -1,7 +1,7 @@
 import React from "react";
 import {TextInput} from "../../components/textInput/textInput";
 import {Button} from "../../components/button/button";
-import "./accountCreation.css"
+import "./accountCreation.css";
 
 export function AccountCreation() {
     return (

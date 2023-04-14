@@ -1,6 +1,6 @@
 import React from "react";
 import {OrderCard} from "../../modules/orderCard/orderCard";
-import "./orders.css"
+import "./orders.css";
 
 export function Orders() {
     return (

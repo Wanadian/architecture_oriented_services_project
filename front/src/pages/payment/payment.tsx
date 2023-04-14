@@ -1,7 +1,7 @@
 import {Button} from "../../components/button/button";
 import React, {useState} from "react";
-import "./payment.css";
 import {TextInput} from "../../components/textInput/textInput";
+import "./payment.css";
 
 export function Payment() {
     const price = 100;

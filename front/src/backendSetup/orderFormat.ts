@@ -5,4 +5,4 @@ export type orderResponse = {
     date: Date,
     price: number,
     products: productResponse[]
-}
+};

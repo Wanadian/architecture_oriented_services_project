@@ -5,4 +5,4 @@ export type ButtonProps = {
     href?: string,
     onClick?: MouseEventHandler<HTMLButtonElement>,
     className?: string
-}
+};
