@@ -1,9 +1,14 @@
 import {Button} from "../../components/button/button";
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
 import {TextInput} from "../../components/textInput/textInput";
 import "./payment.css";
 
 export function Payment() {
+    const nameInput = useRef(null);
+    const cardNumberInput = useRef(null);
+    const cardCodeInput = useRef(null);
+    const dateInput = useRef(null);
+
     const price = 100;
     const [isAccepted, setIsAccepted] = useState(false)
     const [isSent, setIsSent] = useState(false)
@@ -19,10 +24,10 @@ export function Payment() {
             {!isSent &&
                 <>
                     <div>
-                        <TextInput className={"paymentTextInput"} placeholder={"First and last name of the holder"}/>
-                        <TextInput className={"paymentTextInput"} placeholder={"Card number"}/>
-                        <TextInput className={"paymentTextInput"} placeholder={"Card verification code"}/>
-                        <TextInput className={"paymentTextInput"} placeholder={"Date expiration"}/>
+                        <TextInput className={"paymentTextInput"} inputReference={nameInput} placeholder={"First and last name of the holder"}/>
+                        <TextInput className={"paymentTextInput"} inputReference={cardNumberInput} placeholder={"Card number"}/>
+                        <TextInput className={"paymentTextInput"} inputReference={cardCodeInput} placeholder={"Card verification code"}/>
+                        <TextInput className={"paymentTextInput"} inputReference={dateInput} placeholder={"Date expiration"}/>
                     </div>
                     <Button label={"Validate"} onClick={handleClick}/>
                 </>
