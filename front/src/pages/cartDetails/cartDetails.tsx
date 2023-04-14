@@ -1,6 +1,7 @@
 import React from "react";
 import "./cartDetails.css";
 import {OrderProductCard} from "../../modules/orderProductCard/orderProductCard";
+import {Button} from "../../components/button/button";
 
 export function CartDetails() {
     const price = 0;
@@ -14,6 +15,7 @@ export function CartDetails() {
                     <OrderProductCard name={product.name} price={product.price}></OrderProductCard>
                 )}
             </ul>
+            <Button label={"Validate"} href={window.origin + "/payment"}/>
         </div>
     );
 }

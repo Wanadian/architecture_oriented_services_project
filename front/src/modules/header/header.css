@@ -89,7 +89,9 @@
 }
 
 .headerMenu li {
+    display: flex;
     border-bottom: 1px solid #dddddd;
+    justify-content: center;
 }
 
 .headerMenu li a {

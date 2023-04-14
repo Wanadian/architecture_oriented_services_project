@@ -8,6 +8,7 @@ import {CartDetails} from "./pages/cartDetails/cartDetails";
 import {Products} from "./pages/products/products";
 import {Orders} from "./pages/orders/orders";
 import {Header} from "./modules/header/header";
+import {Payment} from "./pages/payment/payment";
 
 const App = () => (
     <React.StrictMode>
@@ -20,6 +21,7 @@ const App = () => (
                 <Route path="/cartDetails" element={<CartDetails />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/orders" element={<Orders />} />
+                <Route path="/payment" element={<Payment />} />
             </Routes>
         </BrowserRouter>
     </React.StrictMode>
