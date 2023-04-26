@@ -1,8 +1,8 @@
-import {productResponse} from "./productFormat";
+import {ProductResponse} from "./productFormat";
 
-export type orderResponse = {
+export type OrderResponse = {
     id: string,
     date: Date,
     price: number,
-    products: productResponse[]
+    products: ProductResponse[]
 };
