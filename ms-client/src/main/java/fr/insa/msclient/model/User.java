@@ -19,21 +19,24 @@ public class User {
     private String pseudo;
     private String firstname;
     private String lastname;
+    private Role role;
 
-    public User(String id, String email, String password, String pseudo, String firstname, String lastname) {
+    public User(String id, String email, String password, String pseudo, String firstname, String lastname, Role role) {
         this.id = id;
         this.email = email;
         this.password = password;
         this.pseudo = pseudo;
         this.firstname = firstname;
         this.lastname = lastname;
+        this.role = role;
     }
 
-    public User(String email, String password, String pseudo, String firstname, String lastname) {
+    public User(String email, String password, String pseudo, String firstname, String lastname, Role role) {
         this.email = email;
         this.password = password;
         this.pseudo = pseudo;
         this.firstname = firstname;
         this.lastname = lastname;
+        this.role = role;
     }
 }

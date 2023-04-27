@@ -1,5 +1,6 @@
 package fr.insa.msclient.controllers;
 
+import fr.insa.msclient.model.Role;
 import fr.insa.msclient.model.dto.GenerateTokenDTO;
 import fr.insa.msclient.model.dto.UserCredentials;
 import fr.insa.msclient.model.dto.UserDTO;
@@ -30,7 +31,12 @@ public class AuthController {
     }
 
     @GetMapping("/valide-token")
-    public String validateToken(@RequestParam("token") String token){
-        return authService.validateToken(token);
+    public ResponseEntity validateToken(@RequestParam("token") String token){
+        return new ResponseEntity<>(authService.validateToken(token) ? HttpStatus.OK : HttpStatus.BAD_REQUEST);
+    }
+
+    @GetMapping("/authorization")
+    public ResponseEntity<Role> authorization(@RequestParam("email") String email){
+        return new ResponseEntity<>(authService.authorize(email), HttpStatus.OK);
     }
 }

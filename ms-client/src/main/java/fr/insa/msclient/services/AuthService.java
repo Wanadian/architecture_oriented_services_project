@@ -1,9 +1,11 @@
 package fr.insa.msclient.services;
 
+import fr.insa.msclient.model.Role;
 import fr.insa.msclient.model.User;
 import fr.insa.msclient.model.dto.UserAssembler;
 import fr.insa.msclient.model.dto.UserDTO;
 import fr.insa.msclient.repositories.UserRepository;
+import jakarta.ws.rs.NotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +24,7 @@ public class AuthService {
     public void registerUser(UserDTO userDTO){
         User user = UserAssembler.fromDto(userDTO);
         user.setPassword(passwordEncoder.encode(userDTO.password()));
+
         userRepository.save(user);
     }
 
@@ -33,7 +36,15 @@ public class AuthService {
         return jwtService.generateToken(email);
     }
 
-    public String validateToken(String token){
-        return jwtService.validateToken(token) ? "valid" : "invalid";
+    public boolean validateToken(String token){
+        return jwtService.validateToken(token);
+    }
+
+    public Role authorize(String email){
+        User user = userRepository.findByEmail(email);
+        if (user == null ){
+            throw new NotFoundException("User not found");
+        }
+        return user.getRole();
     }
 }
