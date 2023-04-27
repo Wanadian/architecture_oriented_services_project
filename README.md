@@ -38,6 +38,7 @@
 * Pour tous les types de profils
   * GET : getAllOrders (triés par date)
   * GET : getCart
+  * GET : getPriceOrder
   * POST : addCartToOrders
   * POST : addProductToCartById(idProduit, idUser)
   * DELETE : deleteProductFromCartById(idProduit, idUser)
