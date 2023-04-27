@@ -21,6 +21,7 @@ services:
       - config-server
     environment:
       CONFIG_URL: http://config-server
+      EUREKA_URI: http://eureka-server
     networks:
       - archi-network
 
