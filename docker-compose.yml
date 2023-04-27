@@ -16,7 +16,7 @@ services:
     depends_on:
       - config-server
     environment:
-      CONFIG_URL: config-server
+      CONFIG_URL: config-server:8070
     networks:
       - archi-network
 
