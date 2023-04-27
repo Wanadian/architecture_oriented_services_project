@@ -1,5 +1,14 @@
 version: '3.5'
 services:
+
+  mongodb:
+    image: mongo:6-jammy
+    hostname: mongodb
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo:/data/db
+
   config-server:
     container_name: config
     build: ./config-server
@@ -9,10 +18,14 @@ services:
   eureka-server:
     container_name: eureka
     build: ./eureka-server
+    hostname: eureka-server
     depends_on:
       - config-server
     ports:
       - "8761:8761"
+    environment:
+      - CONFIG_URL=http://config-server:8070
+      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka/
 
   api-gateway:
     build: ./api-gateway
@@ -22,8 +35,8 @@ services:
     ports:
       - "8080:8080"
     environment:
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka
-      CONFIG_URL: http://config-server:8070
+      - CONFIG_URL=http://config-server:8070
+      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka/
 
   ms-client:
     build: ./ms-client
@@ -31,64 +44,56 @@ services:
       - config-server
       - eureka-server
       - api-gateway
+      - mongodb
     environment:
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka
-      CONFIG_URL: http://config-server:8070
-      MONGO_URI: automate59go:fNBYGPz8IasVsJZw@frderoubaix.t2el3k7.mongodb.net/users?retryWrites=true&w=majority
-      JWT_SECRET: 432646294A404E635266556A586E327235753878214125442A472D4B6150645367566B597033733676397924423F4528482B4D6251655468576D5A7134743777
+      - CONFIG_URL=http://config-server:8070
+      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka/
+      - MONGO_URI=mongodb://mongodb:27017/users?retryWrites=true&w=majority
+      - JWT_SECRET=432646294A404E635266556A586E327235753878214125442A472D4B6150645367566B597033733676397924423F4528482B4D6251655468576D5A7134743777
     ports:
       - "8081:8081"
-#
-#  ms-orders:
-#    build: ./ms-orders
-#    links:
-#      - config-server
-#      - eureka-server
-#    ports:
-#      - "8083:8083"
-#    depends_on:
-#      - config-server
-#      - eureka-server
-#      - api-gateway
-#    environment:
-#      CONFIG_URL: config-server:8070
-#      EUREKA_URI: eureka-server:8761
-#      MONGO_URI: automate59go:fNBYGPz8IasVsJZw@frderoubaix.t2el3k7.mongodb.net/orders?retryWrites=true&w=majority
-#    networks:
-#      - archi-network
-#
-#  ms-payment:
-#    build: ./ms-payment
-#    links:
-#      - config-server
-#      - eureka-server
-#    ports:
-#      - "8084:8084"
-#    depends_on:
-#      - config-server
-#      - eureka-server
-#      - api-gateway
-#    environment:
-#      CONFIG_URL: config-server:8070
-#      EUREKA_URI: eureka-server:8761
-#      MONGO_URI: automate59go:fNBYGPz8IasVsJZw@frderoubaix.t2el3k7.mongodb.net/payment?retryWrites=true&w=majority
-#    networks:
-#      - archi-network
-#
-#  ms-products:
-#    build: ./ms-products
-#    links:
-#      - config-server
-#      - eureka-server
-#    ports:
-#      - "8082:8082"
-#    depends_on:
-#      - config-server
-#      - eureka-server
-#      - api-gateway
-#    environment:
-#      CONFIG_URL: config-server:8070
-#      EUREKA_URI: eureka-server:8761
-#      MONGO_URI: automate59go:fNBYGPz8IasVsJZw@frderoubaix.t2el3k7.mongodb.net/products?retryWrites=true&w=majority
-#    networks:
-#      - archi-network
+
+  ms-orders:
+    build: ./ms-orders
+    ports:
+      - "8083:8083"
+    depends_on:
+      - config-server
+      - eureka-server
+      - api-gateway
+    environment:
+      - CONFIG_URL=http://config-server:8070
+      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka/
+      - MONGO_URI=mongodb://mongodb:27017/orders?retryWrites=true&w=majority
+
+  ms-payment:
+    build: ./ms-payment
+    ports:
+      - "8084:8084"
+    depends_on:
+      - config-server
+      - eureka-server
+      - api-gateway
+    environment:
+      - CONFIG_URL=http://config-server:8070
+      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka/
+      - MONGO_URI=mongodb://mongodb:27017/payment?retryWrites=true&w=majority
+
+  ms-products:
+    build: ./ms-products
+    links:
+      - config-server
+      - eureka-server
+    ports:
+      - "8082:8082"
+    depends_on:
+      - config-server
+      - eureka-server
+      - api-gateway
+    environment:
+      - CONFIG_URL=http://config-server:8070
+      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka/
+      - MONGO_URI=mongodb://mongodb:27017/products?retryWrites=true&w=majority
+
+volumes:
+  mongo:

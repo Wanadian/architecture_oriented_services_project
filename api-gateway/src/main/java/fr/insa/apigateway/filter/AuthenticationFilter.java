@@ -4,6 +4,7 @@ import fr.insa.apigateway.client.AuthServiceApiClient;
 import org.apache.http.HttpHeaders;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
@@ -13,7 +14,7 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
     private final RouteValidator validator;
     private final AuthServiceApiClient authClient;
 
-    public AuthenticationFilter(RouteValidator validator, AuthServiceApiClient authClient) {
+    public AuthenticationFilter(RouteValidator validator, @Lazy AuthServiceApiClient authClient) {
         super(Config.class);
         this.validator = validator;
         this.authClient = authClient;

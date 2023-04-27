@@ -11,8 +11,6 @@ D
 ms-client/.gitignore,5\9\5964fa648390832967a6cb13dd579054d679160d
 w
 Gms-client/src/main/java/fr/insa/msclient/model/dto/UserCredentials.java,9\7\971468b5c9932ca54e2eaacb9bda2fcbb03444d1
-w
-Gapi-gateway/src/main/java/fr/insa/apigateway/ApiGatewayApplication.java,c\5\c5366cb5a2be5162fcd45189f909396fb50257ad
 C
 api-gateway/pom.xml,2\b\2bfa2b108f2439e99e004f4085b58c22cf995f73
 o
@@ -21,8 +19,6 @@ x
 Hms-client/src/main/java/fr/insa/msclient/model/dto/GenerateTokenDTO.java,2\a\2a1bafcd114984dbb7a6731375cac0d91aee2ab0
 q
 Ams-client/src/main/java/fr/insa/msclient/services/JwtService.java,a\2\a2bdc7771a0ddd741e4018b8b82c82727fafa5d1
-A
-ms-client/pom.xml,c\6\c671d0ff324c23431b7730b4bc7f0866eb2dd3f9
 y
 Ims-client/src/main/java/fr/insa/msclient/repositories/UserRepository.java,c\f\cfb80c813d28a17433b37a554d8a0abed13977b6
 :
@@ -42,8 +38,6 @@ B
 ms-payment/pom.xml,5\c\5c90cad9a548e7fa49e0e075193fc273e40f1b95
 v
 Fms-payment/src/main/java/fr/insa/mspayment/model/entities/Payment.java,a\5\a5434baa74f72526454df8275ebc623aace3469d
-}
-Mms-payment/src/main/java/fr/insa/mspayment/controllers/PaymentController.java,9\4\94278e94dab33c67abe4817c71ddcd814de7affd
 ~
 Nms-payment/src/main/java/fr/insa/mspayment/repositories/PaymentRepository.java,9\8\980b6e746c38a357939380706c93e133792bc308
 t
@@ -68,8 +62,6 @@ q
 Ams-orders/src/main/java/fr/insa/msorders/MsOrdersApplication.java,a\9\a93b686cc8850c7e14f8668f91e598e5f3085b12
 v
 Fms-orders/src/test/java/fr/insa/msorders/MsOrdersApplicationTests.java,7\4\749e2e382a8062420c65718e2eddc4593916fd31
-w
-Gapi-gateway/src/main/java/fr/insa/apigateway/filter/RouteValidator.java,8\d\8d8c367c91875f8d7cbfd00ea23d4a090b1c1f1a
 >
 ms-orders/mvnw,f\7\f796119495c78babcfd5fd94e0f6ef5498201c28
 _
@@ -80,14 +72,10 @@ h
 8ms-client/src/main/java/fr/insa/msclient/model/Role.java,3\e\3e9965e21346da90ecfcb9a62f75635b1816e898
 B
 ms-orders/mvnw.cmd,6\3\631b3cd2200bd993da7d3940ce0403c771da0d24
-}
-Mapi-gateway/src/main/java/fr/insa/apigateway/client/AuthServiceApiClient.java,c\5\c5fd6ca39707bf7f457bca0ec8226af135a0ee23
 A
 ms-orders/pom.xml,3\1\31d3e7402fd214b5e2dc8bd78c4cd19b4f6dac1d
 r
 Bms-orders/src/main/java/fr/insa/msorders/model/entities/Order.java,4\c\4c4050a0384feb53146246efeabb0a7c268c4ed7
-y
-Ims-orders/src/main/java/fr/insa/msorders/controllers/OrderController.java,e\0\e03b46c28db66505ee6788a3e5c95d933fe99990
 z
 Jms-orders/src/main/java/fr/insa/msorders/repositories/OrderRepository.java,f\7\f70a33faa42a7c10a84361b1f50c953e9f1a11bc
 p
@@ -108,8 +96,6 @@ x
 Hms-client/src/main/java/fr/insa/msclient/controllers/AuthController.java,6\c\6c9d85777c93cd2ea50b710d97c41287e577cc77
 v
 Fms-products/src/main/java/fr/insa/msproducts/model/entity/Product.java,6\3\63c8c261578b56bb51b3c19886903e889e65ad15
-}
-Mapi-gateway/src/main/java/fr/insa/apigateway/filter/AuthenticationFilter.java,0\9\09a29b8341c71fcb3d41f3ec816043d8418438fc
 D
 ms-products/mvnw.cmd,9\6\96c129bf8914cb52cd933d6286d024a2b4fc20cb
 ~
