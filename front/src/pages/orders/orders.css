@@ -1,0 +1,6 @@
+.ordersContainer{
+    font-family: "Space Grotesk",-apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

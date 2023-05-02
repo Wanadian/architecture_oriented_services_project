@@ -1,0 +1,20 @@
+.homeContainer{
+    font-family: "Space Grotesk",-apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    display: grid;
+    justify-content: center;
+    width: 100%;
+}
+
+.homeTitle{
+    margin-top: 20rem;
+    margin-bottom: 1rem;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.homeButtonContainer{
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+}

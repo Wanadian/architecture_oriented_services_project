@@ -1,0 +1,8 @@
+.orderProductCardContainer{
+    margin: 0.4rem 0;
+}
+
+.orderProductCardName {
+    font-weight: 700;
+    margin-right: 2rem;
+}
