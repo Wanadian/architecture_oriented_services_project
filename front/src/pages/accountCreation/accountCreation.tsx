@@ -9,8 +9,14 @@ export function AccountCreation() {
     const emailInput = useRef<HTMLInputElement>(null);
     const passwordInput = useRef<HTMLInputElement>(null);
 
-    const handleClick = () => {
-        console.log(firstNameInput.current?.value);
+    async function createAccount() {
+        return fetch('http://localhost:8080/api/v1/ms-client/auth/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({email: emailInput.current?.value, password: passwordInput.current?.value, pseudo: "", firstname: firstNameInput.current?.value, lastname: lastNameInput.current?.value})
+        })
     }
 
     return (
@@ -19,7 +25,7 @@ export function AccountCreation() {
             <TextInput placeholder="Last name" inputReference={lastNameInput} className="accountCreationTextInput"/>
             <TextInput placeholder="Email" inputReference={emailInput} className="accountCreationTextInput"/>
             <TextInput placeholder="Password" inputReference={passwordInput} className="accountCreationTextInput"/>
-            <Button label="Submit" onClick={handleClick}/>
+            <Button label="Submit" onClick={createAccount}/>
         </div>
     );
 }
