@@ -14,7 +14,7 @@ export function Orders() {
     return (
         <div className={"ordersContainer"}>
             {orderResponse.map(order => (
-                <OrderCard date={order.date} price={order.price} products={order.products}/>
+                <OrderCard key={order.id} date={order.date} price={order.price} products={order.products}/>
             ))
             }
         </div>

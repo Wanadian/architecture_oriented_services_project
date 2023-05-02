@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f77579d3-423e-4a2b-bb1b-b0467012847c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backendSetup/orderFormat.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/backendSetup/orderFormat.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backendSetup/productFormat.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/backendSetup/productFormat.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/orderCard/orderCard.type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/orderCard/orderCard.type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/productCard/productCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/productCard/productCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/productCard/productCard.type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/productCard/productCard.type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/cartDetails/cartDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/cartDetails/cartDetails.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/orders/orders.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/orders/orders.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/products/products.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/products/products.tsx" afterDir="false" />
     </list>
@@ -90,7 +91,8 @@
       <workItem from="1681237641919" duration="6888000" />
       <workItem from="1681319816546" duration="31601000" />
       <workItem from="1681479571437" duration="3460000" />
-      <workItem from="1682502860811" duration="914000" />
+      <workItem from="1682502860811" duration="7449000" />
+      <workItem from="1683028194689" duration="6127000" />
     </task>
     <servers />
   </component>
