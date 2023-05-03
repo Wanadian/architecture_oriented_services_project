@@ -9,14 +9,15 @@ export function Products() {
         return !!currentCart ? JSON.parse(currentCart) : [];
     }
 
+    const [products, setProducts] = useState<ProductResponse[]>([]);
+
     const [cart, setCart] = useState<ProductResponse[]>(cartStater());
 
-    const productResponse : ProductResponse[] = [
-        {id: "1", name: "test", price: 20, imageSource: "https://becs-table.com.au/wp-content/uploads/2014/01/ice-cream-1.jpg", description: "description"},
-        {id: "2", name: "test2", price: 20},
-        {id: "4", name: "test4", price: 5, imageSource: "https://becs-table.com.au/wp-content/uploads/2014/01/ice-cream-1.jpg"},
-        {id: "3", name: "test3", price: 10, description: "description"}
-    ];
+    useEffect(() => {
+        fetch("http://localhost:8080/api/v1/ms-products/product")
+            .then(response  => response.json())
+            .then(data => setProducts(data))
+    },[])
 
     useEffect(() => {
         const currentCart = localStorage.getItem("cart");
@@ -34,7 +35,7 @@ export function Products() {
 
     return (
         <div className="productsContainer">
-            {productResponse.map(product => (
+            {products.map(product => (
                 <ProductCard key={product.id} name={product.name} price={product.price} imageSource={product.imageSource} onClick={() => addProductToCart(product)}/>
             ))
             }
