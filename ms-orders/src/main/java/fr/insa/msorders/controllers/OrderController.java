@@ -26,13 +26,13 @@ public class OrderController {
         return orderRepository.findById(id).orElse(null);
     }
 
-    @GetMapping("/user/{id}")
-    public List<Order> getByUserId(@PathVariable String id) {
-        return orderRepository.findByUserId(id);
+    @GetMapping("/user/{email}")
+    public List<Order> getByUserId(@PathVariable String email) {
+        return orderRepository.findByUserEmail(email);
     }
 
     @PostMapping()
     public Order create(@RequestBody OrderDto orderDto){
-        return orderRepository.save(new Order(orderDto.date(), orderDto.price(), orderDto.productsIds(), orderDto.userID()));
+        return orderRepository.save(new Order(orderDto.date(), orderDto.price(), orderDto.productsIds(), orderDto.userEmail()));
     }
 }
