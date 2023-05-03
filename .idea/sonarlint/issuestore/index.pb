@@ -78,12 +78,6 @@ w
 Gms-products/src/main/java/fr/insa/msproducts/MsProductsApplication.java,0\c\0c52a8877105df6345f0a039b4cb0a52359235ec
 |
 Lms-products/src/test/java/fr/insa/msproducts/MsProductsApplicationTests.java,8\7\879a4bdaca1e80679efbe4ed2f3fecacaa93cff3
-r
-Bms-orders/src/main/java/fr/insa/msorders/model/entities/Order.java,4\c\4c4050a0384feb53146246efeabb0a7c268c4ed7
-p
-@ms-orders/src/main/java/fr/insa/msorders/model/dto/OrderDto.java,e\9\e9bd22591c5873d5d6525d845215dd70441b168f
-z
-Jms-orders/src/main/java/fr/insa/msorders/repositories/OrderRepository.java,f\7\f70a33faa42a7c10a84361b1f50c953e9f1a11bc
 v
 Fms-payment/src/main/java/fr/insa/mspayment/model/entities/Payment.java,a\5\a5434baa74f72526454df8275ebc623aace3469d
 t
@@ -98,8 +92,6 @@ C
 ms-products/pom.xml,2\6\263c8586e9fa2d084a2b944a28aaaaf93f0da762
 v
 Fms-products/src/main/java/fr/insa/msproducts/model/entity/Product.java,6\3\63c8c261578b56bb51b3c19886903e889e65ad15
-
-Oms-products/src/main/java/fr/insa/msproducts/controllers/ProductController.java,a\e\ae2c08d6e5ad77538e76454e1ed334f3d175533f
 v
 Fms-products/src/main/java/fr/insa/msproducts/model/dto/ProductDTO.java,3\8\386de214a2aedb6c745a62385c1ebfa7743d30ae
 ~
@@ -122,7 +114,5 @@ E
 Mapi-gateway/src/main/java/fr/insa/apigateway/client/AuthServiceApiClient.java,c\5\c5fd6ca39707bf7f457bca0ec8226af135a0ee23
 w
 Gapi-gateway/src/main/java/fr/insa/apigateway/ApiGatewayApplication.java,c\5\c5366cb5a2be5162fcd45189f909396fb50257ad
-y
-Ims-orders/src/main/java/fr/insa/msorders/controllers/OrderController.java,e\0\e03b46c28db66505ee6788a3e5c95d933fe99990
 }
 Mms-payment/src/main/java/fr/insa/mspayment/controllers/PaymentController.java,9\4\94278e94dab33c67abe4817c71ddcd814de7affd

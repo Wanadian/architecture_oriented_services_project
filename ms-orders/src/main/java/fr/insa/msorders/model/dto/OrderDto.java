@@ -5,7 +5,8 @@ import java.util.Date;
 
 public record OrderDto(Date date,
                        double price,
-                       String[] productsIds) {
+                       String[] productsIds,
+                       String userID) {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -19,11 +19,13 @@ public class Order {
     private String id;
     private Date date;
     private double price;
+    private String userId;
     private String[] productsIds;
 
-    public Order(Date date, double price, String[] productsIds) {
+    public Order(Date date, double price, String[] productsIds, String userId) {
         this.date = date;
         this.price = price;
         this.productsIds = productsIds;
+        this.userId = userId;
     }
 }

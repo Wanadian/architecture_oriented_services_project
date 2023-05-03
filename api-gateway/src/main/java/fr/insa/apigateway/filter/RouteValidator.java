@@ -13,6 +13,7 @@ public class RouteValidator {
             "/api/v1/ms-client/auth/login",
             "/api/v1/ms-client/auth/register",
             "/api/v1/ms-client/auth/valide-token",
+            "/api/v1/ms-products/product",
             "/eureka"
     );
 
