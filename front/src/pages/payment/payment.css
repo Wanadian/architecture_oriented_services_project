@@ -1,0 +1,23 @@
+.paymentContainer{
+    font-family: "Space Grotesk",-apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 6rem;
+}
+
+.sentPayment{
+    margin-top: 18rem;
+}
+
+.acceptedPayment{
+    color: green;
+}
+
+.refusedPayment{
+    color: red;
+}
+
+.paymentTextInput{
+    margin-bottom: 2rem;
+}
