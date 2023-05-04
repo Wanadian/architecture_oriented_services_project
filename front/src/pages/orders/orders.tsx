@@ -1,19 +1,20 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {OrderCard} from "../../modules/orderCard/orderCard";
 import "./orders.css";
 import {OrderResponse} from "../../backendSetup/orderFormat";
 
 export function Orders() {
-    const orderResponse : OrderResponse[] = [
-        {id: "1", price: 20, date: new Date(), products: [{id: "id", name: "name", price: 20}, {id: "id", name: "name", price: 20}]},
-        {id: "2", price: 1000, date: new Date(), products: [{id: "id", name: "product", price: 50}, {id: "id", name: "name", price: 20}]},
-        {id: "3", price: 25, date: new Date(), products: [{id: "id", name: "name", price: 20}, {id: "id", name: "name", price: 20}]},
-        {id: "4", price: 1, date: new Date(), products: [{id: "id", name: "name", price: 20}, {id: "id", name: "name", price: 20}]}
-    ]
+    const [orders, setOrders] = useState<OrderResponse[]>([])
+
+    useEffect(() => {
+        fetch(`http://localhost:8080/api/v1/ms-orders/order/user/${localStorage.getItem("user")? JSON.parse(localStorage.getItem("user")!).email : ""}`, {mode: "cors"})
+            .then(response  => response.json())
+            .then(data => setOrders(data))
+    },[])
 
     return (
         <div className={"ordersContainer"}>
-            {orderResponse.map(order => (
+            {orders.length >= 1 && orders.map(order => (
                 <OrderCard key={order.id} date={order.date} price={order.price} products={order.products}/>
             ))
             }

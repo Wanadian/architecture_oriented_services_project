@@ -7,17 +7,19 @@ export function Login() {
     const emailInput = useRef<HTMLInputElement>(null);
     const passwordInput = useRef<HTMLInputElement>(null);
 
-    async function loginUser() {
+    async function loginUser(event: React.MouseEvent) {
+        event.preventDefault()
         return fetch('http://localhost:8080/api/v1/ms-client/auth/login', {
-            method: 'POST',
+            method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({email: emailInput.current?.value, password: passwordInput.current?.value})
         })
+            .then(response => response.clone().json())
             .then(data => {
-                data.json();
-                localStorage.setItem("token", JSON.stringify(data))
+                localStorage.setItem("user", JSON.stringify(data))
+                window.location.href = window.origin + "/products"
             })
     }
 

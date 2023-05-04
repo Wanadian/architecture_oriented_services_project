@@ -5,7 +5,11 @@ import "./header.css";
 
 export function Header(){
     const [isActive, setIsActive] = useState(false);
+
     const handleClick = () => setIsActive(!isActive);
+
+    const logOut = () => localStorage.removeItem("user")
+
     return(
         <div className="header">
             <a className={"headerLink"} href={window.origin + "/products"}>
@@ -31,7 +35,7 @@ export function Header(){
                                     <a href={window.origin + "/orders"}>My orders</a>
                                 </li>
                                 <li>
-                                    <a href={window.origin}>Log out</a>
+                                    <a href={window.origin} onClick={logOut}>Log out</a>
                                 </li>
                             </ul>
                         </nav>
