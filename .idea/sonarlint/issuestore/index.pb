@@ -60,8 +60,6 @@ D
 ms-products/mvnw,9\6\965acae3ad741edfdcbf3f60bd98c2ce5e14cecd
 F
 ms-products/.gitignore,1\0\10a10f543c309556182ab952cac66e10665018fb
-x
-Hms-client/src/main/java/fr/insa/msclient/controllers/AuthController.java,6\c\6c9d85777c93cd2ea50b710d97c41287e577cc77
 q
 Ams-orders/src/main/java/fr/insa/msorders/MsOrdersApplication.java,a\9\a93b686cc8850c7e14f8668f91e598e5f3085b12
 v

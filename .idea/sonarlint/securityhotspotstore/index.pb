@@ -80,8 +80,6 @@ Dms-payment/src/main/java/fr/insa/mspayment/MsPaymentApplication.java,e\4\e47cd
 Lms-products/src/test/java/fr/insa/msproducts/MsProductsApplicationTests.java,8\7\879a4bdaca1e80679efbe4ed2f3fecacaa93cff3
 a
 1ms-products/.mvn/wrapper/maven-wrapper.properties,a\3\a324ef35d7e3e304a4d3f0a09ff7afa8af4c3082
-x
-Hms-client/src/main/java/fr/insa/msclient/controllers/AuthController.java,6\c\6c9d85777c93cd2ea50b710d97c41287e577cc77
 v
 Fms-products/src/main/java/fr/insa/msproducts/model/entity/Product.java,6\3\63c8c261578b56bb51b3c19886903e889e65ad15
 D
