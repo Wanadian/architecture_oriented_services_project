@@ -5,8 +5,6 @@
 ms-client/.env,3\8\3866a082fc24cd7d6b8db1702e00c9a4ae56041c
 q
 Ams-client/src/main/java/fr/insa/msclient/MsClientApplication.java,5\e\5e773350924f02acf1d3c17702ee961269770f0b
-o
-?ms-client/src/main/java/fr/insa/msclient/config/AuthConfig.java,d\8\d88360d42da6e704168fa09867a9c560d090c43e
 D
 ms-client/.gitignore,5\9\5964fa648390832967a6cb13dd579054d679160d
 w
@@ -76,8 +74,6 @@ u
 Ems-client/src/main/java/fr/insa/msclient/model/dto/UserAssembler.java,9\d\9dcf8747c9c7be035996881943113a16731d6a54
 w
 Gms-products/src/main/java/fr/insa/msproducts/MsProductsApplication.java,0\c\0c52a8877105df6345f0a039b4cb0a52359235ec
-r
-Bms-client/src/main/java/fr/insa/msclient/services/AuthService.java,5\f\5fa68ee780d3d136ecf13011f3ee09ad28e81fd4
 t
 Dms-payment/src/main/java/fr/insa/mspayment/MsPaymentApplication.java,e\4\e47cd15c0741a7d099380fb52ac118f7cd5a7872
 |
@@ -108,11 +104,11 @@ E
 eureka-server/pom.xml,b\3\b39ae52d769ea03b699b5602439afd875433c8a7
 }
 Meureka-server/src/main/java/fr/insa/eurekaserver/EurekaServerApplication.java,9\b\9bd4a895b90a7eec9fccb8198142c84b5236bc4a
-A
-ms-client/pom.xml,c\6\c671d0ff324c23431b7730b4bc7f0866eb2dd3f9
-w
-Gapi-gateway/src/main/java/fr/insa/apigateway/ApiGatewayApplication.java,c\5\c5366cb5a2be5162fcd45189f909396fb50257ad
-}
-Mapi-gateway/src/main/java/fr/insa/apigateway/client/AuthServiceApiClient.java,c\5\c5fd6ca39707bf7f457bca0ec8226af135a0ee23
 }
 Mms-payment/src/main/java/fr/insa/mspayment/controllers/PaymentController.java,9\4\94278e94dab33c67abe4817c71ddcd814de7affd
+M
+config/ms-products.properties,a\9\a9b197acaf4567ecbbce52ce9bac7b22560c1f49
+L
+config/ms-payment.properties,f\a\faac5f836b65e164cf92d0a71d1e500d6c3f9545
+K
+config/ms-orders.properties,7\2\72bc49fd0edc6b02ffc70a712792e05d1265a82b
