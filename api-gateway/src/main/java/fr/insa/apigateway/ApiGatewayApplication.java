@@ -31,7 +31,7 @@ public class ApiGatewayApplication {
 			System.out.println("id: " + definition.getId() + "  " + definition.getUri().toString());
 		}
 		definitions.stream().filter(routeDefinition -> routeDefinition.getId().matches("ms-.*")).forEach(routeDefinition -> {
-			String name = routeDefinition.getId();
+			String name = routeDefinition.getId().replaceAll("ms-", "");
 			GroupedOpenApi.builder().pathsToMatch("/" + name + "/**").group(name).build();
 		});
 		return groups;

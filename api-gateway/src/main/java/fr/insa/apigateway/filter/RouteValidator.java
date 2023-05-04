@@ -10,10 +10,10 @@ import java.util.function.Predicate;
 public class RouteValidator {
 
     public static final List<String> openApiEndpoints = List.of(
-            "/api/v1/ms-client/auth/login",
-            "/api/v1/ms-client/auth/register",
-            "/api/v1/ms-client/auth/valide-token",
-            "/api/v1/ms-products/product",
+            "/api/v1/client/auth/login",
+            "/api/v1/client/auth/register",
+            "/api/v1/client/auth/valide-token",
+            "/api/v1/products/product",
             "/eureka"
     );
 
