@@ -14,7 +14,12 @@ public class RouteValidator {
             "/api/v1/client/auth/register",
             "/api/v1/client/auth/valide-token",
             "/api/v1/products/product",
-            "/eureka"
+            "/eureka",
+            "/client/v3/api-docs",
+            "/products/v3/api-docs",
+            "/orders/v3/api-docs",
+            "/payment/v3/api-docs",
+            "/webjars/swagger-ui"
     );
 
     public Predicate<ServerHttpRequest> isSecured =
