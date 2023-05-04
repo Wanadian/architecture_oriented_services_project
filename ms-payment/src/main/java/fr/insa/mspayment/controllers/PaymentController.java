@@ -3,6 +3,9 @@ package fr.insa.mspayment.controllers;
 import fr.insa.mspayment.model.dto.PaymentDto;
 import fr.insa.mspayment.model.entities.Payment;
 import fr.insa.mspayment.repositories.PaymentRepository;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.servers.Server;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,7 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Date;
 
 @RestController
-@RequestMapping("api/v1/ms-payment/pay")
+@RequestMapping("/pay")
+@SecurityRequirement(name = "bearerAuth")
+@OpenAPIDefinition(servers = {@Server(url = "http://localhost:8080/payment", description = "localhost server")})
 public class PaymentController {
 
     private final PaymentRepository paymentRepository;

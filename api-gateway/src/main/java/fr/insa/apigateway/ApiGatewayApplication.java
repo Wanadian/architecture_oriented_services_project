@@ -18,23 +18,23 @@ import java.util.List;
 @EnableFeignClients("fr.insa")
 public class ApiGatewayApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ApiGatewayApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ApiGatewayApplication.class, args);
+    }
 
-	@Bean
-	@Lazy(false)
-	public List<GroupedOpenApi> apis(RouteDefinitionLocator locator) {
-		List<GroupedOpenApi> groups = new ArrayList<>();
-		List<RouteDefinition> definitions = locator.getRouteDefinitions().collectList().block();
-		for (RouteDefinition definition : definitions) {
-			System.out.println("id: " + definition.getId() + "  " + definition.getUri().toString());
-		}
-		definitions.stream().filter(routeDefinition -> routeDefinition.getId().matches("ms-.*")).forEach(routeDefinition -> {
-			String name = routeDefinition.getId().replaceAll("ms-", "");
-			GroupedOpenApi.builder().pathsToMatch("/" + name + "/**").group(name).build();
-		});
-		return groups;
-	}
+    @Bean
+    @Lazy(false)
+    public List<GroupedOpenApi> apis(RouteDefinitionLocator locator) {
+        List<GroupedOpenApi> groups = new ArrayList<>();
+        List<RouteDefinition> definitions = locator.getRouteDefinitions().collectList().block();
+        for (RouteDefinition definition : definitions) {
+            System.out.println("id: " + definition.getId() + "  " + definition.getUri().toString());
+        }
+        definitions.stream().filter(routeDefinition -> routeDefinition.getId().matches("ms-.*")).forEach(routeDefinition -> {
+            String name = routeDefinition.getId().replaceAll("ms-", "");
+            GroupedOpenApi.builder().pathsToMatch("/" + name + "/**").group(name).build();
+        });
+        return groups;
+    }
 
 }

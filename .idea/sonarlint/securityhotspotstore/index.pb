@@ -3,8 +3,6 @@
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 >
 ms-client/.env,3\8\3866a082fc24cd7d6b8db1702e00c9a4ae56041c
-q
-Ams-client/src/main/java/fr/insa/msclient/MsClientApplication.java,5\e\5e773350924f02acf1d3c17702ee961269770f0b
 D
 ms-client/.gitignore,5\9\5964fa648390832967a6cb13dd579054d679160d
 w
@@ -30,8 +28,6 @@ E
 ms-payment/.gitignore,2\1\214ad32fb39a4d650e8e90fb6d1e1349e2bf52ea
 C
 ms-payment/mvnw.cmd,3\e\3ecd9919575b72c210414bc267a3e892973c16b6
-B
-ms-payment/pom.xml,5\c\5c90cad9a548e7fa49e0e075193fc273e40f1b95
 v
 Fms-payment/src/main/java/fr/insa/mspayment/model/entities/Payment.java,a\5\a5434baa74f72526454df8275ebc623aace3469d
 ~
@@ -54,8 +50,6 @@ F
 ms-products/Dockerfile,0\d\0d374f4530c32b5358a40f5ff2bdb3ab777682e2
 E
 ms-payment/Dockerfile,b\7\b71158acd32fcd3ffdfa3573fcdb6903cd586aff
-q
-Ams-orders/src/main/java/fr/insa/msorders/MsOrdersApplication.java,a\9\a93b686cc8850c7e14f8668f91e598e5f3085b12
 v
 Fms-orders/src/test/java/fr/insa/msorders/MsOrdersApplicationTests.java,7\4\749e2e382a8062420c65718e2eddc4593916fd31
 >
@@ -68,14 +62,8 @@ h
 8ms-client/src/main/java/fr/insa/msclient/model/Role.java,3\e\3e9965e21346da90ecfcb9a62f75635b1816e898
 B
 ms-orders/mvnw.cmd,6\3\631b3cd2200bd993da7d3940ce0403c771da0d24
-A
-ms-orders/pom.xml,3\1\31d3e7402fd214b5e2dc8bd78c4cd19b4f6dac1d
 u
 Ems-client/src/main/java/fr/insa/msclient/model/dto/UserAssembler.java,9\d\9dcf8747c9c7be035996881943113a16731d6a54
-w
-Gms-products/src/main/java/fr/insa/msproducts/MsProductsApplication.java,0\c\0c52a8877105df6345f0a039b4cb0a52359235ec
-t
-Dms-payment/src/main/java/fr/insa/mspayment/MsPaymentApplication.java,e\4\e47cd15c0741a7d099380fb52ac118f7cd5a7872
 |
 Lms-products/src/test/java/fr/insa/msproducts/MsProductsApplicationTests.java,8\7\879a4bdaca1e80679efbe4ed2f3fecacaa93cff3
 a
@@ -86,8 +74,6 @@ D
 ms-products/mvnw.cmd,9\6\96c129bf8914cb52cd933d6286d024a2b4fc20cb
 ~
 Nms-products/src/main/java/fr/insa/msproducts/repository/ProductRepository.java,e\a\ea01feaabe5922810b9077bdcc9f6136df347e93
-C
-ms-products/pom.xml,2\6\263c8586e9fa2d084a2b944a28aaaaf93f0da762
 @
 ms-products/mvnw,9\6\965acae3ad741edfdcbf3f60bd98c2ce5e14cecd
 v
@@ -102,8 +88,6 @@ E
 eureka-server/pom.xml,b\3\b39ae52d769ea03b699b5602439afd875433c8a7
 }
 Meureka-server/src/main/java/fr/insa/eurekaserver/EurekaServerApplication.java,9\b\9bd4a895b90a7eec9fccb8198142c84b5236bc4a
-}
-Mms-payment/src/main/java/fr/insa/mspayment/controllers/PaymentController.java,9\4\94278e94dab33c67abe4817c71ddcd814de7affd
 M
 config/ms-products.properties,a\9\a9b197acaf4567ecbbce52ce9bac7b22560c1f49
 L

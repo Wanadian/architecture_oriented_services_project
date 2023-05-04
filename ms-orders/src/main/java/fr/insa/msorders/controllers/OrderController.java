@@ -3,12 +3,17 @@ package fr.insa.msorders.controllers;
 import fr.insa.msorders.model.dto.OrderDto;
 import fr.insa.msorders.model.entities.Order;
 import fr.insa.msorders.repositories.OrderRepository;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.servers.Server;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v1/ms-orders/order")
+@RequestMapping("/order")
+@SecurityRequirement(name = "bearerAuth")
+@OpenAPIDefinition(servers = {@Server(url = "http://localhost:8080/orders", description = "localhost server")})
 public class OrderController {
     private final OrderRepository orderRepository;
 

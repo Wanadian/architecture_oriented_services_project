@@ -3,12 +3,17 @@ package fr.insa.msproducts.controllers;
 import fr.insa.msproducts.model.dto.ProductDTO;
 import fr.insa.msproducts.model.entity.Product;
 import fr.insa.msproducts.repository.ProductRepository;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.servers.Server;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v1/ms-products/product")
+@RequestMapping("/product")
+@SecurityRequirement(name = "bearerAuth")
+@OpenAPIDefinition(servers = {@Server(url = "http://localhost:8080/products", description = "localhost server")})
 public class ProductController {
     private final ProductRepository productRepository;
 

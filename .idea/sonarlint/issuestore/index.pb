@@ -3,8 +3,6 @@
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 >
 ms-client/.env,3\8\3866a082fc24cd7d6b8db1702e00c9a4ae56041c
-q
-Ams-client/src/main/java/fr/insa/msclient/MsClientApplication.java,5\e\5e773350924f02acf1d3c17702ee961269770f0b
 D
 ms-client/.gitignore,5\9\5964fa648390832967a6cb13dd579054d679160d
 w
@@ -60,16 +58,10 @@ D
 ms-products/mvnw,9\6\965acae3ad741edfdcbf3f60bd98c2ce5e14cecd
 F
 ms-products/.gitignore,1\0\10a10f543c309556182ab952cac66e10665018fb
-q
-Ams-orders/src/main/java/fr/insa/msorders/MsOrdersApplication.java,a\9\a93b686cc8850c7e14f8668f91e598e5f3085b12
 v
 Fms-orders/src/test/java/fr/insa/msorders/MsOrdersApplicationTests.java,7\4\749e2e382a8062420c65718e2eddc4593916fd31
-t
-Dms-payment/src/main/java/fr/insa/mspayment/MsPaymentApplication.java,e\4\e47cd15c0741a7d099380fb52ac118f7cd5a7872
 y
 Ims-payment/src/test/java/fr/insa/mspayment/MsPaymentApplicationTests.java,c\c\cc6c58da6de36fe3bcf10ec06d2b2f03c3e36b87
-w
-Gms-products/src/main/java/fr/insa/msproducts/MsProductsApplication.java,0\c\0c52a8877105df6345f0a039b4cb0a52359235ec
 |
 Lms-products/src/test/java/fr/insa/msproducts/MsProductsApplicationTests.java,8\7\879a4bdaca1e80679efbe4ed2f3fecacaa93cff3
 v
@@ -78,12 +70,6 @@ t
 Dms-payment/src/main/java/fr/insa/mspayment/model/dto/PaymentDto.java,0\b\0b06491537c13c05aff44dc77ccc5e011a57189c
 ~
 Nms-payment/src/main/java/fr/insa/mspayment/repositories/PaymentRepository.java,9\8\980b6e746c38a357939380706c93e133792bc308
-A
-ms-orders/pom.xml,3\1\31d3e7402fd214b5e2dc8bd78c4cd19b4f6dac1d
-B
-ms-payment/pom.xml,5\c\5c90cad9a548e7fa49e0e075193fc273e40f1b95
-C
-ms-products/pom.xml,2\6\263c8586e9fa2d084a2b944a28aaaaf93f0da762
 v
 Fms-products/src/main/java/fr/insa/msproducts/model/entity/Product.java,6\3\63c8c261578b56bb51b3c19886903e889e65ad15
 v
@@ -102,8 +88,6 @@ O
 Meureka-server/src/main/java/fr/insa/eurekaserver/EurekaServerApplication.java,9\b\9bd4a895b90a7eec9fccb8198142c84b5236bc4a
 E
 eureka-server/pom.xml,b\3\b39ae52d769ea03b699b5602439afd875433c8a7
-}
-Mms-payment/src/main/java/fr/insa/mspayment/controllers/PaymentController.java,9\4\94278e94dab33c67abe4817c71ddcd814de7affd
 M
 config/ms-products.properties,a\9\a9b197acaf4567ecbbce52ce9bac7b22560c1f49
 L
