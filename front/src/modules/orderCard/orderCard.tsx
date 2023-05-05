@@ -17,11 +17,11 @@ export function OrderCard({date, price, products, classname, orderProductCardsCl
                     <span className={"orderCardDate"}>{date.toString()}</span>
                     <span>{`${price}$`}</span>
                 </span>
-                <img className={"orderCardImage"} src={showProducts? retractIcon : expandIcon} alt={"expand icon"}/>
+                {products && <img className={"orderCardImage"} src={showProducts? retractIcon : expandIcon} alt={"expand icon"}/>}
             </div>
             {showProducts &&
                 <ul className={"orderCardProductList"}>
-                    {products.map(product =>
+                    {products && products.map(product =>
                         <OrderProductCard name={product.name} price={product.price} classname={orderProductCardsClassname}></OrderProductCard>
                     )}
                 </ul>
