@@ -19,7 +19,7 @@ export function CartDetails() {
     }
 
     async function validate() {
-        return fetch('http://localhost:8080/orders', {
+        return fetch('http://localhost:8080/orders/order', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
