@@ -23,7 +23,7 @@ export function CartDetails() {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': "Bearer " + localStorage.getItem("user")? JSON.parse(localStorage.getItem("user")!).email : ""
+                'Authorization': "Bearer " + localStorage.getItem("user")? JSON.parse(localStorage.getItem("user")!).token : ""
             },
             body: JSON.stringify({date: new Date(), price: renderPrice(cart), productsIds: [...cart.map(product => product.id)], userEmail: localStorage.getItem("user")? JSON.parse(localStorage.getItem("user")!).email : ""})
         })

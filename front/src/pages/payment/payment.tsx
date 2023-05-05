@@ -32,7 +32,7 @@ export function Payment() {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': "Bearer " + localStorage.getItem("user")? JSON.parse(localStorage.getItem("user")!).email : ""
+                'Authorization': "Bearer " + localStorage.getItem("user")? JSON.parse(localStorage.getItem("user")!).token : ""
             },
             body: JSON.stringify({cardNumber: cardNumberInput.current?.value, cardLimitDate: dateInput.current?.value, cardSecret: cardCodeInput.current?.value, price: renderPrice(cart), clientId: ""})
         })
