@@ -33,7 +33,7 @@ Vous avez également accès à un certain nombre de service :
 #### Zipkin
 `http://localhost:9411`
 
-Malheuresement *Zipkin* ne reçoit aucune requête dû au problème de compatibilité avec spring boot 3, nous n'avons pas réussi à comprendre les changements de fonctionnement entre la version 2.7 et la 3.0.
+Malheureusement *Zipkin* ne reçoit aucune requête dû au problème de compatibilité avec spring boot 3, nous n'avons pas réussi à comprendre les changements de fonctionnement entre la version 2.7 et la 3.0.
 
 #### Le client front-end
 `http://localhost:3000`
@@ -47,6 +47,21 @@ Attention, notre projet comporte des routes sécurisées, que ce soit sur postma
 - se créer un compte via la route : `/client/auth/register` 
 - se login via la route : `/client/auth/login`
 - récupérer le token en sortie
+
+Seules les routes suivantes sont accessibles **sans token** : 
+* Pour swagger : 
+  * /client/v3/api-docs,
+  * /products/v3/api-docs,
+  * /orders/v3/api-docs,
+  * /payment/v3/api-docs,
+  * /webjars/swagger-ui
+* Pour les micro-services :
+  * /client/auth/login,
+  * /client/auth/register,
+  * /client/auth/valide-token,
+  * /products/product,
+
+*Remarque : La collection postman nous permet de faire ces appels, ainsi que biens d'autres (concerant les produits, les commandes, etc.).*
 
 ### Cas postman
 ![postman](docs/img/postman.png)
@@ -63,6 +78,8 @@ Attention, notre projet comporte des routes sécurisées, que ce soit sur postma
   * DELETE : delete(id)
   * PUT : update(id, productDto)
 
+*Remarque : La collection postman permet d'ajouter un nouveau produit afin de tester notre projet.*
+
 ### Pour la gestion des clients *(ms-client)* :
   * POST : addNewUser(userDto)
   * PUT : getToken(userCredentials)
@@ -77,3 +94,5 @@ Attention, notre projet comporte des routes sécurisées, que ce soit sur postma
 
 ### Pour la gestion des paiements *(ms-payment)* :
   * POST : pay(paymentDto)
+
+*Remarque : Pour valider la commande, il faut 6 chiffres pour le second champ, 2 pour le troisième et une date sous la forme dd/mm pour le quatrième.*
