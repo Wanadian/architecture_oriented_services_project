@@ -18,6 +18,17 @@ export function CartDetails() {
         return price;
     }
 
+    async function validate() {
+        return fetch('http://localhost:8080/orders', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({date: new Date(), price: renderPrice(cart), productsIds: [...cart.map(product => product.id)], userEmail: localStorage.getItem("user")? JSON.parse(localStorage.getItem("user")!).email : ""})
+        })
+            .then(response => response.ok ? window.location.href = `${window.origin}/payment` : "")
+    }
+
     const resetCart = () => localStorage.removeItem("cart");
 
     return (
@@ -28,7 +39,7 @@ export function CartDetails() {
                     <OrderProductCard key={product.id} name={product.name} price={product.price}></OrderProductCard>
                 )}
             </ul>
-            <Button label={"Validate"} href={window.origin + "/payment"}/>
+            <Button label={"Validate"} onClick={validate}/>
             <Button label={"Clear"} onClick={resetCart}/>
         </div>
     );
