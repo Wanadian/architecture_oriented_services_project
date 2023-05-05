@@ -48,26 +48,27 @@ Attention, notre projet comporte des routes sécurisées, que ce soit sur postma
 - se login via la route : `/client/auth/login`
 - récupérer le token en sortie
 
-Seules les routes suivantes sont accessibles **sans token** : 
-* Pour swagger : 
-  * /client/v3/api-docs,
-  * /products/v3/api-docs,
-  * /orders/v3/api-docs,
-  * /payment/v3/api-docs,
-  * /webjars/swagger-ui
-* Pour les micro-services :
-  * /client/auth/login,
-  * /client/auth/register,
-  * /client/auth/valide-token,
-  * /products/product,
-
-*Remarque : La collection postman nous permet de faire ces appels, ainsi que biens d'autres (concerant les produits, les commandes, etc.).*
-
 ### Cas postman
 ![postman](docs/img/postman.png)
 
 ### Cas swagger
 ![swagger](docs/img/swagger.png)
+
+*Remarque 1* :
+*Seules les routes suivantes sont accessibles **sans token** :*
+* *Pour swagger :*
+  * */client/v3/api-docs,*
+  * */products/v3/api-docs,*
+  * */orders/v3/api-docs,*
+  * */payment/v3/api-docs,*
+  * */webjars/swagger-ui*
+* *Pour les micro-services :*
+  * */client/auth/login,*
+  * */client/auth/register,*
+  * */client/auth/valide-token,*
+  * */products/product*
+
+*Remarque 2 : La collection postman nous permet de faire ces appels, ainsi que biens d'autres (concerant les produits, les commandes, etc.).*
 
 ## Routes mises en place
 
