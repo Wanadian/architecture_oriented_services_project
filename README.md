@@ -30,6 +30,8 @@ Vous avez également accès à un certain nombre de service :
 #### Postman
 `./docs/Archi-service.postman_collection.json`
 
+/!\ Veillez à bien l'importer via votre workspace postman (pour se faire rien de plus simple, vous cliquez sur *import* puis *from file* et vous n'avez plus qu`à sléctionner ce fichier pour obtenir la collection dans votre espace de travail postman).
+
 #### Zipkin
 `http://localhost:9411`
 
