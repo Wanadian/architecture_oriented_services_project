@@ -5,8 +5,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "auth-service", url = "ms-client")
+@FeignClient(name = "auth-service", url = "http://localhost:8080")
 public interface AuthServiceApiClient {
-    @GetMapping("/api/v1/ms-client/auth/valide-token")
+    @GetMapping("/client/auth/valide-token")
     ResponseEntity validateToken(@RequestParam("token") String token);
 }

@@ -9,6 +9,12 @@ services:
     volumes:
       - mongo:/data/db
 
+  zipkin:
+    image: openzipkin/zipkin
+    hostname: zipkin
+    ports:
+      - '9411:9411'
+
   config-server:
     container_name: config
     build: ./config-server
