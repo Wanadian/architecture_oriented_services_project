@@ -93,10 +93,18 @@ Attention, notre projet comporte des routes sécurisées, que ce soit sur postma
   * GET : getByUserId(email)
   * POST : create(orderDto)
 
+*Remarque : Lorsque, côté front, vous cliquez sur clean, vous devez rafraîchir la page.*
+
 ### Pour la gestion des paiements *(ms-payment)* :
   * POST : pay(paymentDto)
 
 *Remarque : Pour valider la commande, il faut 6 chiffres pour le second champ, 2 pour le troisième et une date sous la forme dd/mm pour le quatrième.*
+
+## Conseils
+
+N'hésitez pas à vous armez de patience pour certains appels car il y a de nombreuses instances dans le docker compose. De plus, n'hésitez pas à rafraîchir la page si vous n'avez pas de réponse lorsque vous cliquez sur un élément.
+
+Pour vérifier l'aspect fonctionnel des routes mises à disposition, n'hésitez pas à utiliser la collection postman.
 
 ## Perspectives d'amélioration
 
