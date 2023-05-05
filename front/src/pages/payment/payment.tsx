@@ -28,7 +28,7 @@ export function Payment() {
 
     async function confirmOrder (event: React.MouseEvent) {
         event.preventDefault();
-        return fetch(`http://${process.env.REACT_APP_API_HOST}:8080/api/v1/ms-client/auth/login`, {
+        return fetch(`http://${process.env.REACT_APP_API_HOST}:8080/payment/pay`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
