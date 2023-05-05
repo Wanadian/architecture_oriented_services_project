@@ -31,7 +31,8 @@ export function Payment() {
         return fetch(`http://${process.env.REACT_APP_API_HOST}:8080/api/v1/ms-client/auth/login`, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': "Bearer " + localStorage.getItem("user")? JSON.parse(localStorage.getItem("user")!).email : ""
             },
             body: JSON.stringify({cardNumber: cardNumberInput.current?.value, cardLimitDate: dateInput.current?.value, cardSecret: cardCodeInput.current?.value, price: renderPrice(cart), clientId: ""})
         })

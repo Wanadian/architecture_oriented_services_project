@@ -7,7 +7,8 @@ export function Orders() {
     const [orders, setOrders] = useState<OrderResponse[]>([])
 
     useEffect(() => {
-        fetch(`http://${process.env.REACT_APP_API_HOST}:8080/orders/order/user/${localStorage.getItem("user")? JSON.parse(localStorage.getItem("user")!).email : ""}`, {mode: "cors"})
+        fetch(`http://${process.env.REACT_APP_API_HOST}:8080/orders/order/user/${localStorage.getItem("user")? JSON.parse(localStorage.getItem("user")!).email : ""}`,
+            {headers : {'Authorization': "Bearer " + localStorage.getItem("user")? JSON.parse(localStorage.getItem("user")!).email : ""}})
             .then(response  => response.json())
             .then(data => setOrders(data))
     },[])

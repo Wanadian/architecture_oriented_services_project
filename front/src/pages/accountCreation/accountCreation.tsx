@@ -17,6 +17,7 @@ export function AccountCreation() {
             },
             body: JSON.stringify({email: emailInput.current?.value, password: passwordInput.current?.value, pseudo: "", firstname: firstNameInput.current?.value, lastname: lastNameInput.current?.value})
         })
+            .then(response => response.ok ? window.location.href = window.origin : "")
     }
 
     return (
