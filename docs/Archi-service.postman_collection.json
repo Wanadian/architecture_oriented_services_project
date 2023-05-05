@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "2ac4f877-3a5c-4d50-8b15-928c0233685a",
+		"name": "Archi-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12313668"
+	},
+	"item": [
+		{
+			"name": "config",
+			"item": [
+				{
+					"name": "eureka-server",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8070/eureka-server/default",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"eureka-server",
+								"default"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api-gateway",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8070/api-gateway/default",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api-gateway",
+								"default"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "api-gateway",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user@insa.fr\",\r\n    \"password\": \"password\",\r\n    \"pseudo\": \"user\",\r\n    \"firstname\": \"us\",\r\n    \"lastname\": \"er\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/ms-client/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ms-client",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/client/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"client",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "authorization",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0IiwiaWF0IjoxNjgzMjc3MDA2LCJleHAiOjE2ODMyODA2MDZ9.h9VH2jcUzYSJwpaY8W_J5wZ8kYIIvgp8ox95OMDM4x0SLzBiuTYdDA9fuDAFxxS42Llhe7r9jiT0isbruXE4yw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/client/auth/authorization?email=user@insa.fr",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"client",
+								"auth",
+								"authorization"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "user@insa.fr"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "valide-token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/client/auth/valide-token?token=",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"client",
+								"auth",
+								"valide-token"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/orders/order",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get orders by user email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/orders/order/user/{email}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"order",
+								"user",
+								"{email}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"chaise design nordique\",\r\n  \"price\": 230,\r\n  \"imgUrl\": \"https://www.ikea.com/fr/fr/images/products/mammut-chaise-enfant-interieur-exterieur-bleu__0727922_pe735928_s5.jpg?f=s\",\r\n  \"description\": \"sublime chaise ikea\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/products/product",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
