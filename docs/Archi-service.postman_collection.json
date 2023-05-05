@@ -69,15 +69,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/api/v1/ms-client/auth/register",
+							"raw": "localhost:8080/client/auth/register",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"api",
-								"v1",
-								"ms-client",
+								"client",
 								"auth",
 								"register"
 							]
@@ -92,7 +90,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"user\",\r\n    \"password\": \"password\"\r\n}",
+							"raw": "{\r\n    \"email\": \"user@insa.fr\",\r\n    \"password\": \"password\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -198,6 +196,16 @@
 				{
 					"name": "get orders by user email",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0IiwiaWF0IjoxNjgzMjc3MDA2LCJleHAiOjE2ODMyODA2MDZ9.h9VH2jcUzYSJwpaY8W_J5wZ8kYIIvgp8ox95OMDM4x0SLzBiuTYdDA9fuDAFxxS42Llhe7r9jiT0isbruXE4yw",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {

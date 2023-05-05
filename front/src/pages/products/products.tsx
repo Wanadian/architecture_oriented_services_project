@@ -36,7 +36,7 @@ export function Products() {
     return (
         <div className="productsContainer">
             {products.map(product => (
-                <ProductCard key={product.id} name={product.name} price={product.price} imageSource={product.imageSource} onClick={() => addProductToCart(product)}/>
+                <ProductCard key={product.id} name={product.name} price={product.price} imgUrl={product.imgUrl} onClick={() => addProductToCart(product)}/>
             ))
             }
         </div>

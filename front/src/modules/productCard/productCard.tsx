@@ -5,7 +5,7 @@ import "./productCard.css";
 export function ProductCard(
     {
         name,
-        imageSource,
+        imgUrl,
         price,
         classname,
         onClick
@@ -16,7 +16,7 @@ export function ProductCard(
                 <span>{name}</span>
                 <span>{`${price}$`}</span>
             </span>
-            {imageSource && <img className="productCardImage" src={imageSource} alt={"product"}/>}
+            {imgUrl && <img className="productCardImage" src={imgUrl} alt={"product"}/>}
             <button className="productCardButton" onClick={onClick}>
                 <img className="productCardButtonImage" src={addIcon} alt={"add"}/>
             </button>
