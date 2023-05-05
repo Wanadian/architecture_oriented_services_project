@@ -8,7 +8,7 @@ export function Login() {
     const passwordInput = useRef<HTMLInputElement>(null);
 
     async function loginUser(event: React.MouseEvent) {
-        event.preventDefault()
+        event.preventDefault();
         return fetch('http://localhost:8080/api/v1/ms-client/auth/login', {
             method: 'PUT',
             headers: {
