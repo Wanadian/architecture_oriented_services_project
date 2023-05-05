@@ -14,7 +14,7 @@ export function OrderCard({date, price, products, classname, orderProductCardsCl
         <div className={`orderCardContainer ${classname}`} onClick={handleClick}>
             <div className={`smallOrderCardContainer`}>
                 <span>
-                    <span className={"orderCardDate"}>{date.toDateString()}</span>
+                    <span className={"orderCardDate"}>{date.toString()}</span>
                     <span>{`${price}$`}</span>
                 </span>
                 <img className={"orderCardImage"} src={showProducts? retractIcon : expandIcon} alt={"expand icon"}/>
