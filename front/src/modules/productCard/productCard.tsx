@@ -5,7 +5,7 @@ import "./productCard.css";
 export function ProductCard(
     {
         name,
-        imageSource = "https://www.mrpanet.org/global_graphics/default-store-350x350.jpg",
+        imageSource,
         price,
         classname,
         onClick
