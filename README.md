@@ -2,7 +2,7 @@
 
 ## Équipe de travail
 
-&ensp;Pour la mise en œuvre de cette application, nous sommes trois étudiant(e)s, Amandine CARLIER (n°21700078), William DENORME (n°21903046) et François DEROUBAIX (n°22105578). De cette façon, nous avons pu répartir la charge de travail de l’ensemble du projet.
+Pour la mise en œuvre de cette application, nous sommes trois étudiant(e)s, Amandine CARLIER (n°21700078), William DENORME (n°21903046) et François DEROUBAIX (n°22105578). De cette façon, nous avons pu répartir la charge de travail de l’ensemble du projet.
 
 ## Architecture mise en place
 
@@ -97,3 +97,12 @@ Attention, notre projet comporte des routes sécurisées, que ce soit sur postma
   * POST : pay(paymentDto)
 
 *Remarque : Pour valider la commande, il faut 6 chiffres pour le second champ, 2 pour le troisième et une date sous la forme dd/mm pour le quatrième.*
+
+## Perspectives d'amélioration
+
+Comme tout projet, celui-ci peut bien évidemment être amélioré. En effet voici une courte liste des points qui peuvent être approfondis :
+  * Optimisation du code
+  * Gestion des erreurs
+  * Appronfissement du frontend
+  * Mise en place de la partie Zipkin
+  * Évolution du docker pour le lancement des instances
