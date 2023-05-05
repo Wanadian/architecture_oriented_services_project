@@ -35,6 +35,7 @@ services:
 
   api-gateway:
     build: ./api-gateway
+    hostname: api-gateway
     depends_on:
       - config-server
       - eureka-server
@@ -42,6 +43,8 @@ services:
       - "8080:8080"
     environment:
       - CONFIG_URL=http://config-server:8070
+      - ZIPKIN_HOST=zipkin
+      - ZIPKIN_HOST=9411
       - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka/
 
   ms-client:
@@ -53,6 +56,8 @@ services:
       - mongodb
     environment:
       - CONFIG_URL=http://config-server:8070
+      - ZIPKIN_HOST=zipkin
+      - ZIPKIN_HOST=9411
       - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka/
       - MONGO_URI=mongodb://mongodb:27017/users?retryWrites=true&w=majority
       - JWT_SECRET=432646294A404E635266556A586E327235753878214125442A472D4B6150645367566B597033733676397924423F4528482B4D6251655468576D5A7134743777
@@ -100,6 +105,15 @@ services:
       - CONFIG_URL=http://config-server:8070
       - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka/
       - MONGO_URI=mongodb://mongodb:27017/products?retryWrites=true&w=majority
+
+  front:
+    build: ./front
+    depends_on:
+      - api-gateway
+    ports:
+      - "3000:3000"
+    environment:
+      REACT_APP_API_HOST: localhost
 
 volumes:
   mongo:

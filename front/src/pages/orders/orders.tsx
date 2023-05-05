@@ -7,7 +7,7 @@ export function Orders() {
     const [orders, setOrders] = useState<OrderResponse[]>([])
 
     useEffect(() => {
-        fetch(`http://localhost:8080/api/v1/ms-orders/order/user/${localStorage.getItem("user")? JSON.parse(localStorage.getItem("user")!).email : ""}`, {mode: "cors"})
+        fetch(`http://${process.env.REACT_APP_API_HOST}:8080/orders/order/user/${localStorage.getItem("user")? JSON.parse(localStorage.getItem("user")!).email : ""}`, {mode: "cors"})
             .then(response  => response.json())
             .then(data => setOrders(data))
     },[])

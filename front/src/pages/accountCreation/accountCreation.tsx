@@ -10,7 +10,7 @@ export function AccountCreation() {
     const passwordInput = useRef<HTMLInputElement>(null);
 
     async function createAccount() {
-        return fetch('http://localhost:8080/api/v1/ms-client/auth/register', {
+        return fetch(`http://${process.env.REACT_APP_API_HOST}:8080/client/auth/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

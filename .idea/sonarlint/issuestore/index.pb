@@ -124,3 +124,9 @@ C
 ms-products/pom.xml,2\6\263c8586e9fa2d084a2b944a28aaaaf93f0da762
 q
 Ams-client/src/main/java/fr/insa/msclient/MsClientApplication.java,5\e\5e773350924f02acf1d3c17702ee961269770f0b
+
+Oms-products/src/main/java/fr/insa/msproducts/controllers/ProductController.java,a\e\ae2c08d6e5ad77538e76454e1ed334f3d175533f
+y
+Ims-orders/src/main/java/fr/insa/msorders/controllers/OrderController.java,e\0\e03b46c28db66505ee6788a3e5c95d933fe99990
+x
+Hms-client/src/main/java/fr/insa/msclient/controllers/AuthController.java,6\c\6c9d85777c93cd2ea50b710d97c41287e577cc77

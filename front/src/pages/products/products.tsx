@@ -14,7 +14,7 @@ export function Products() {
     const [cart, setCart] = useState<ProductResponse[]>(cartStater());
 
     useEffect(() => {
-        fetch("http://localhost:8080/api/v1/ms-products/product")
+        fetch(`http://${process.env.REACT_APP_API_HOST}:8080/products/product`)
             .then(response  => response.json())
             .then(data => setProducts(data))
     },[])
