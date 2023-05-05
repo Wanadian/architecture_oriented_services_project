@@ -1,8 +1,8 @@
-# Projet d'Architecture Orienté Services
+# Projet d'Architecture Orientée Services
 
 ## Équipe de travail
 
-&ensp;Pour la mise en œuvre de cette application, nous nous avons de choisi de s’associer à trois étudiants, Amandine CARLIER (n°21700078), William DENORME (n°21903046) et François DEROUBAIX (n°22105578). De cette façon, nous avons pu répartir la charge de travail de l’ensemble du projet.
+&ensp;Pour la mise en œuvre de cette application, nous sommes trois étudiant(e)s, Amandine CARLIER (n°21700078), William DENORME (n°21903046) et François DEROUBAIX (n°22105578). De cette façon, nous avons pu répartir la charge de travail de l’ensemble du projet.
 
 ## Architecture mise en place
 
@@ -12,28 +12,28 @@
 
 ### Explications
 
-L'ensemble de tous ces services sont executables via un docker-compose avec la commande : 
+L'ensemble de tous ces services sont exécutables via un docker-compose avec la commande : 
 
 `docker compose up -d (--build)`
 
-/!\ il est possible qu'au démarage du docker-compose il faille relancer manuellement les containers qui ce sont arrêté, 
-en effet les autres micro-services ont besoin de spring config et nous n'avons pas trouvé comment ajouté un delay de lancement à ces containers.
+/!\ Il est possible qu'au démarage du docker-compose il faille relancer manuellement les containers qui ce sont arrêtés, 
+en effet les autres micro-services ont besoin de spring config et nous n'avons pas trouvé comment ajouter un *delay* de lancement à ces containers.
 
-une fois l'ensemble des services démarés vous pouvez accéder à la gateway vient l'url : 
+Une fois l'ensemble des services démarrés, vous pouvez accéder à la *gateway* via l'url : 
 `localhost:8080`
 
-Vous avez également accéder à un certain nombre de service : 
+Vous avez également accès à un certain nombre de service : 
 
 #### Swagger
 `http://localhost:8080/webjars/swagger-ui/index.html`
 
 #### Postman
-`.docs/Archi-service.postman_collection.json`
+`./docs/Archi-service.postman_collection.json`
 
 #### Zipkin
 `http://localhost:9411`
 
-malheuresement zipkin ne reçoit aucune requête dû au problème de compatibilité avec spring boot 3, nous n'avons pas réussi à comprendre les changements de fonctionnement entre la version 2.7 et la 3.0
+Malheuresement *Zipkin* ne reçoit aucune requête dû au problème de compatibilité avec spring boot 3, nous n'avons pas réussi à comprendre les changements de fonctionnement entre la version 2.7 et la 3.0.
 
 #### Le client front-end
 `http://localhost:3000`
@@ -43,48 +43,37 @@ malheuresement zipkin ne reçoit aucune requête dû au problème de compatibili
 
 ## Sécurité
 
-Attention, notre projet comporte des routes sécurisé, que ce soit sur postman ou swagger, il est important de :
+Attention, notre projet comporte des routes sécurisées, que ce soit sur postman ou swagger, il est important de :
 - se créer un compte via la route : `/client/auth/register` 
 - se login via la route : `/client/auth/login`
 - récupérer le token en sortie
 
-### cas postman
+### Cas postman
 ![postman](docs/img/postman.png)
 
-### cas swagger
+### Cas swagger
 ![swagger](docs/img/swagger.png)
 
 ## Routes mises en place
 
-### Pour la gestion et la vente des produits :
-* Pour les profils de type Administrateur
-  * POST : createProduct(product)
-  * DELETE : deleteProductById(id)
-  * PUT : modifyProductById(id)
-* Pour tous les types de profils
-  * GET : getAllProducts --> sort by name
-  * GET : getAllProductsByType(type)
+### Pour la gestion et la vente des produits *(ms-products)* :
+  * GET : getAll
   * GET : getProductById(id)
+  * POST : create(productDto)
+  * DELETE : delete(id)
+  * PUT : update(id, productDto)
 
-### Pour la gestion des clients :
-* Pour les profils de type Administrateur
-  * Comptes créés en "dur"
-* Pour tous les types de profils
-  * POST : createAccount(user)
-  * GET : login (JWT)
-  * GET : logout (JWT)
-* En "interne"
-  * GET : isUserAdmin
+### Pour la gestion des clients *(ms-client)* :
+  * POST : addNewUser(userDto)
+  * PUT : getToken(userCredentials)
+  * GET : validateToken(token)
+  * GET : authorization(email)
 
-### Pour la gestion des commandes / du panier :
-* Pour tous les types de profils
-  * GET : getAllOrders (triés par date)
-  * GET : getCart
-  * GET : getPriceOrder
-  * POST : addCartToOrders
-  * POST : addProductToCartById(idProduit, idUser)
-  * DELETE : deleteProductFromCartById(idProduit, idUser)
+### Pour la gestion des commandes / du panier *(ms-orders)* :
+  * GET : getAll
+  * GET : getById(id)
+  * GET : getByUserId(email)
+  * POST : create(orderDto)
 
-### Pour la gestion des paiements :
-* Pour tous les types de profils
-  * GET : processPaiement(cardInfo)
+### Pour la gestion des paiements *(ms-payment)* :
+  * POST : pay(paymentDto)
